@@ -1,5 +1,7 @@
 package pl.edu.agh.to1.dice.logic;
 
+import pl.edu.agh.to1.dice.logic.computing.RoundComputer;
+
 import java.util.List;
 import java.util.Scanner;
 
@@ -13,11 +15,13 @@ public class GameController {
     private final ScoreBoard scoreBoard;
     private final DiceBucket diceBucket;
     private int roundsPlayed = 0;
+    private final RoundComputer roundComputer;
 
-    public GameController(List<Player> players, ScoreBoard scoreBoard, DiceBucket diceBucket) {
+    public GameController(List<Player> players, ScoreBoard scoreBoard, DiceBucket diceBucket, RoundComputer roundComputer) {
         this.players = players;
         this.scoreBoard = scoreBoard;
         this.diceBucket = diceBucket;
+        this.roundComputer = roundComputer;
     }
 
     public Player getWinningPlayer() {
@@ -33,7 +37,7 @@ public class GameController {
     }
 
     public boolean isFinished() {
-        return roundsPlayed < 13;
+        return roundsPlayed < DiceCategory.values().length;
     }
 
     public void nextRound() {
@@ -44,7 +48,8 @@ public class GameController {
         for (Player p : players) {
             scoreBoard.display();
             final int result = makeAMove(p);
-            System.out.println("Player's " + p.getName() + " result in this round is " + result);
+            System.out.println("Player's " + p + " result in this round is " + result);
+            scoreBoard.display();
         }
 
         roundsPlayed++;
@@ -53,16 +58,22 @@ public class GameController {
     private int makeAMove(Player player) {
         Scanner scanner = new Scanner(System.in);
 
-        getDiceArrangement(scanner);
+        makeDiceArrangement(scanner);
 
-        final DiceCategory diceCategory = chooseCategory(scanner);
+        DiceCategory diceCategory;
+        do {
+            diceCategory = chooseCategory(scanner);
+        } while (scoreBoard.isIllegalMove(player, diceCategory));
 
-        return computeResult(diceCategory);
+        final int result = computeResult(diceCategory);
 
+        scoreBoard.update(player, diceCategory, result);
+
+        return result;
     }
 
     private int computeResult(DiceCategory diceCategory) {
-
+        return roundComputer.compute(diceCategory, diceBucket);
     }
 
     private DiceCategory chooseCategory(Scanner scanner) {
@@ -99,7 +110,7 @@ public class GameController {
         return DiceCategory.ONE;
     }
 
-    private void getDiceArrangement(Scanner scanner) {
+    private void makeDiceArrangement(Scanner scanner) {
         int rollsLeft = MAX_ROLLS_ALLOWED;
         while (rollsLeft > 0) {
             diceBucket.roll();
@@ -126,6 +137,8 @@ public class GameController {
                 rollsLeft = 0;
             }
         }
+
+        diceBucket.unblockAll();
     }
 
 }

@@ -1,19 +1,18 @@
 package pl.edu.agh.to1.dice.logic;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
 /**
  * Author: Piotr Turek
  */
-public class DiceBucket {
+public class DiceBucket implements Iterable<Dice> {
     private final ArrayList<Dice> dices;
-    private final ArrayList<Boolean> blocked;
     private final int bucketSize;
 
     public DiceBucket(int diceCount) {
         bucketSize = diceCount;
         dices = new ArrayList<Dice>(diceCount);
-        blocked = new ArrayList<Boolean>(diceCount);
 
     }
 
@@ -22,7 +21,7 @@ public class DiceBucket {
             throw new DiceGameException("Dice nr " + i + " does not exist.");
         }
 
-        return blocked.get(i);
+        return dices.get(i).isBlocked();
     }
 
     public void setBlocked(int i, boolean value) {
@@ -30,12 +29,15 @@ public class DiceBucket {
             throw new DiceGameException("Dice nr " + i + " does not exist.");
         }
 
-        blocked.set(i, value);
+        final Dice dice = dices.get(i);
+
+        if (value) dice.block();
+        else dice.unblock();
     }
 
     public void unblockAll() {
-        for (int i = 0; i < bucketSize; i++) {
-            setBlocked(i, false);
+        for (Dice dice : dices) {
+            dice.unblock();
         }
     }
 
@@ -44,14 +46,24 @@ public class DiceBucket {
     }
 
     public void roll() {
-        for (int i = 0; i < bucketSize; i++) {
-            if (!isBlocked(i)) {
-                dices.get(i).roll();
+        for (Dice dice : dices) {
+            if (!dice.isBlocked()) {
+                dice.roll();
             }
         }
     }
 
     public void display() {
+        System.out.print("Dice arrangement: ");
+        for (Dice dice : dices) {
+            if (dice.isBlocked()) System.out.print("{" + dice.getState() + "}, ");
+            else System.out.print(dice.getState() + ", ");
+            System.out.print('\n');
+        }
+    }
 
+    @Override
+    public Iterator<Dice> iterator() {
+        return dices.iterator();
     }
 }

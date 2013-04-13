@@ -8,6 +8,7 @@ import java.util.Random;
 public class Dice {
     private int state = 1;
     private final Random generator = new Random();
+    private boolean blocked = false;
 
     public int getState() {
         return state;
@@ -16,5 +17,17 @@ public class Dice {
     public int roll() {
         state = generator.nextInt(5) + 1;
         return state;
+    }
+
+    public boolean isBlocked() {
+        return blocked;
+    }
+
+    public void block() {
+        blocked = true;
+    }
+
+    public void unblock() {
+        blocked = false;
     }
 }
