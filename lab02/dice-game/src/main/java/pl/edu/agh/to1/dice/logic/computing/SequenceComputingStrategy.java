@@ -15,6 +15,7 @@ public class SequenceComputingStrategy extends AbstractPredicateComputingStrateg
     public SequenceComputingStrategy(int reward, int minCount) {
         super(reward);
         this.minCount = minCount;
+        for (int i = 0; i < 6; i++) values.add(false);
     }
 
     @Override

@@ -15,6 +15,7 @@ public class SameComputingStrategy implements ComputingStrategy {
 
     public SameComputingStrategy(int minCount) {
         this.minCount = minCount;
+        for (int i = 0; i < 6; i++) valueCount.add(0);
     }
 
     @Override

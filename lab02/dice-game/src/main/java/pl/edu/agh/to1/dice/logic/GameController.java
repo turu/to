@@ -66,6 +66,9 @@ public class GameController {
         Scanner scanner = new Scanner(System.in);
 
         makeDiceArrangement(scanner);
+        System.out.print("\nFinal dice arrangement: ");
+        diceBucket.display();
+        System.out.printf("%n%n");
 
         DiceCategory diceCategory;
         do {
@@ -84,7 +87,7 @@ public class GameController {
     }
 
     private DiceCategory chooseCategory(Scanner scanner) {
-        System.out.println("Choose category: 1 | 2 | ... | 6 | 3ki | 4ki | ful | ms | ds | g | sz\n");
+        System.out.println("Choose category: 1 | 2 | ... | 6 | 3ki | 4ki | ful | ms | ds | g | sz");
         final String cat = scanner.nextLine().trim();
         if (cat.equals("1")) {
             return DiceCategory.ONE;
@@ -127,12 +130,17 @@ public class GameController {
             if (rollsLeft == 1) break;
             System.out.println("Accept this arrangement? [y/n] ");
 
-            if (!scanner.nextBoolean()) {
-                System.out.println("Enter which dices to block (numbers separated by spaces), f.e.: 1 2 3 4\n");
-                final String[] split = scanner.nextLine().trim().split("\\w+");
+            if (scanner.nextLine().trim().equals("n")) {
+                System.out.print("Enter which dices to block (numbers separated by spaces), f.e.: 1 2 3 4\t> ");
+                final String line = scanner.nextLine().trim();
+                if (line.length() == 0) {
+                    rollsLeft--;
+                    continue;
+                }
+                final String[] split = line.split("\\s+");
                 int i = 0;
                 for (String s : split) {
-                    i = Integer.parseInt(s);
+                    i = Integer.parseInt(s) - 1;
                     if (i < 0 || i >= diceBucket.getBucketSize()) {
                         System.out.println("No such dice, i = " + i + "\n");
                     } else {
@@ -140,7 +148,6 @@ public class GameController {
                     }
                 }
 
-                diceBucket.display();
                 rollsLeft--;
             } else {
                 rollsLeft = 0;

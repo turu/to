@@ -56,11 +56,9 @@ public class DiceBucket implements Iterable<Dice> {
     }
 
     public void display() {
-        System.out.print("Dice arrangement: ");
         for (Dice dice : dices) {
             if (dice.isBlocked()) System.out.print("{" + dice.getState() + "}, ");
             else System.out.print(dice.getState() + ", ");
-            System.out.print('\n');
         }
     }
 
