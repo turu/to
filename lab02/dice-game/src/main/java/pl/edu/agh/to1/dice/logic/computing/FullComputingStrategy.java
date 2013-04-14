@@ -14,6 +14,7 @@ public class FullComputingStrategy extends AbstractPredicateComputingStrategy im
 
     public FullComputingStrategy() {
         super(25);
+        for (int i = 0; i < 6; i++) valueCount.add(0);
     }
 
     @Override
