@@ -28,7 +28,10 @@ public class SequenceComputingStrategy extends AbstractPredicateComputingStrateg
         int seqLen = 0, longest = 0;
         for (int i = 0; i < values.size(); i++) {
             if (values.get(i)) seqLen++;
-            else if (seqLen > longest) longest = seqLen;
+            else if (seqLen > longest) {
+                longest = seqLen;
+                seqLen = 0;
+            }
         }
         if (seqLen > longest) longest = seqLen;
         if (longest >= minCount) return true;
