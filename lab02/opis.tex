@@ -1,0 +1,27 @@
+\documentclass[]{article}
+\usepackage[polish]{babel}
+\usepackage[cp1250]{inputenc}
+\usepackage{polski}
+\usepackage[T1]{fontenc}
+\frenchspacing
+\usepackage{setspace}
+\onehalfspacing
+\usepackage{indentfirst}
+\usepackage{graphicx}
+\usepackage{float}
+
+\author{Piotr Turek}
+
+\begin{document}
+
+\begin{figure}
+\includegraphics[width=\textwidth]{./diagram.png}
+\end{figure}
+
+\section{Komentarz}
+
+\paragraph{}
+Klasa \emph{DiceGame} odpowiada za logikê interakcji z u¿ytkownikiem. Logikê gry oddelegowuje ona do klasy \emph{RoundComputer}, która z u¿yciem odpowiednich strategii (\emph{ComputingStrategy}) wylicza punktacjê poszczególnych ruchów. Klasa \emph{ScoreBoard} enkapsuluje aktualny stan gry (wyniki). \emph{DiceBucket} natomiast modeluje kube³ek z kostkami i wszystkie jego funkcjonalnoœci.
+
+
+\end{document}

@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6fc2f8c0-6427-47f0-bec2-7ff41ad4915c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pl/edu/agh/to1/dice/logic/computing/SequenceComputingStrategy.java" afterPath="$PROJECT_DIR$/src/main/java/pl/edu/agh/to1/dice/logic/computing/SequenceComputingStrategy.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/pl/edu/agh/to1/dice/logic/computing/SequenceComputingStrategyTest.java" afterPath="$PROJECT_DIR$/src/test/java/pl/edu/agh/to1/dice/logic/computing/SequenceComputingStrategyTest.java" />
-    </list>
+    <list default="true" id="6fc2f8c0-6427-47f0-bec2-7ff41ad4915c" name="Default" comment="" />
     <ignored path="dice-game.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/fragment.java" changelist="6fc2f8c0-6427-47f0-bec2-7ff41ad4915c" time="1365939001112" ignored="false" />
@@ -96,10 +93,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="SequenceComputingStrategy.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="SequenceComputingStrategy.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/pl/edu/agh/to1/dice/logic/computing/SequenceComputingStrategy.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="18" selection-start="1100" selection-end="1100" vertical-scroll-proportion="0.75667655">
+            <state line="24" column="50" selection-start="834" selection-end="834" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#412#421#0" expanded="true" />
@@ -119,19 +116,63 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="App.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/pl/edu/agh/to1/dice/App.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="13" selection-start="87" selection-end="87" vertical-scroll-proportion="0.0">
-              <folding />
+      <file leaf-file-name="JAVA/pl.edu.agh.to1.dice.logic.DiceGame" pinned="false" current="false" current-in-tab="false">
+        <entry file="uml://JAVA/pl.edu.agh.to1.dice.logic.DiceGame">
+          <provider selected="true" editor-type-id="UmlEditorProvider">
+            <state>
+              <ID>JAVA</ID>
+              <OriginalElement>pl.edu.agh.to1.dice.logic.DiceGame</OriginalElement>
+              <nodes>
+                <node x="287.0" y="119.0">pl.edu.agh.to1.dice.logic.Dice</node>
+                <node x="263.0" y="1.0">pl.edu.agh.to1.dice.logic.DiceBucket</node>
+                <node x="-234.0" y="111.0">pl.edu.agh.to1.dice.logic.ScoreBoard</node>
+                <node x="46.0" y="-1.0">pl.edu.agh.to1.dice.logic.computing.RoundComputer</node>
+                <node x="31.0" y="121.0">pl.edu.agh.to1.dice.logic.computing.ComputingStrategy</node>
+                <node x="1.0" y="-116.0">pl.edu.agh.to1.dice.logic.DiceGame</node>
+                <node x="-217.0" y="-10.0">pl.edu.agh.to1.dice.logic.Player</node>
+              </nodes>
+              <notes />
+              <edges>
+                <edge source="pl.edu.agh.to1.dice.logic.DiceGame" target="pl.edu.agh.to1.dice.logic.computing.RoundComputer">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="pl.edu.agh.to1.dice.logic.DiceGame" target="pl.edu.agh.to1.dice.logic.Player">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="pl.edu.agh.to1.dice.logic.DiceGame" target="pl.edu.agh.to1.dice.logic.ScoreBoard">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="pl.edu.agh.to1.dice.logic.ScoreBoard" target="pl.edu.agh.to1.dice.logic.Player">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="pl.edu.agh.to1.dice.logic.DiceGame" target="pl.edu.agh.to1.dice.logic.DiceBucket">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="pl.edu.agh.to1.dice.logic.DiceBucket" target="pl.edu.agh.to1.dice.logic.Dice">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+              </edges>
+              <settings layout="Hierarchic Group" zoom="1.0" x="-323.5" y="9.5" />
+              <SelectedNodes>
+                <node>pl.edu.agh.to1.dice.logic.computing.ComputingStrategy</node>
+              </SelectedNodes>
+              <Categories />
+              <SCOPE>All</SCOPE>
+              <VISIBILITY>private</VISIBILITY>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DiceGame.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="DiceGame.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/pl/edu/agh/to1/dice/logic/DiceGame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="174" column="26" selection-start="5828" selection-end="5828" vertical-scroll-proportion="0.0">
+            <state line="174" column="26" selection-start="5828" selection-end="5828" vertical-scroll-proportion="1.4703264">
               <folding>
                 <element signature="e#397#405#0" expanded="true" />
               </folding>
@@ -142,7 +183,7 @@
       <file leaf-file-name="ScoreBoard.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/pl/edu/agh/to1/dice/logic/ScoreBoard.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="121" column="68" selection-start="4367" selection-end="4367" vertical-scroll-proportion="0.0">
+            <state line="121" column="27" selection-start="4367" selection-end="4367" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#360#396#0" expanded="true" />
@@ -150,28 +191,6 @@
                 <element signature="e#542#559#0" expanded="true" />
                 <element signature="e#625#642#0" expanded="true" />
                 <element signature="e#864#887#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ScoreBoardTest.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/pl/edu/agh/to1/dice/logic/ScoreBoardTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="53" selection-start="1070" selection-end="1070" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GeneralComputingStrategyTest.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/pl/edu/agh/to1/dice/logic/computing/GeneralComputingStrategyTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="13" selection-start="431" selection-end="431" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -193,17 +212,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state line="29" column="37" selection-start="545" selection-end="545" vertical-scroll-proportion="0.0">
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SequenceComputingStrategyTest.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/pl/edu/agh/to1/dice/logic/computing/SequenceComputingStrategyTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="109" column="40" selection-start="3847" selection-end="3847" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -869,7 +877,7 @@
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32902583" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24973205" sideWeight="0.73061633" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24973205" sideWeight="0.71570575" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2693837" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2693837" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -936,25 +944,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="uml://JAVA/pl.edu.agh.to1.dice">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>JAVA</ID>
-          <OriginalElement>pl.edu.agh.to1.dice</OriginalElement>
-          <nodes>
-            <node x="" y="">pl.edu.agh.to1.dice.logic</node>
-            <node x="" y="">pl.edu.agh.to1.dice.App</node>
-          </nodes>
-          <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="1.0" x="104.0" y="57.5" />
-          <SelectedNodes />
-          <Categories />
-          <SCOPE>All</SCOPE>
-          <VISIBILITY>private</VISIBILITY>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/pl/edu/agh/to1/dice/logic/computing/SameComputingStrategyTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="39" column="77" selection-start="1202" selection-end="1202" vertical-scroll-proportion="0.0">
@@ -982,58 +971,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="uml://JAVA/pl.edu.agh.to1.dice.logic.DiceGame">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>JAVA</ID>
-          <OriginalElement>pl.edu.agh.to1.dice.logic.DiceGame</OriginalElement>
-          <nodes>
-            <node x="" y="">pl.edu.agh.to1.dice.logic.GameController</node>
-            <node x="" y="">pl.edu.agh.to1.dice.logic.computing.AbstractPredicateComputingStrategy</node>
-            <node x="" y="">pl.edu.agh.to1.dice.logic.DiceBucket</node>
-            <node x="" y="">pl.edu.agh.to1.dice.logic.ScoreBoard</node>
-            <node x="" y="">pl.edu.agh.to1.dice.logic.computing.RoundComputer</node>
-            <node x="" y="">pl.edu.agh.to1.dice.logic.computing.FullComputingStrategy</node>
-            <node x="" y="">pl.edu.agh.to1.dice.logic.computing.ComputingStrategy</node>
-            <node x="" y="">pl.edu.agh.to1.dice.App</node>
-            <node x="" y="">pl.edu.agh.to1.dice.logic.DiceGame</node>
-            <node x="" y="">pl.edu.agh.to1.dice.logic.computing.ChanceComputingStrategy</node>
-            <node x="" y="">pl.edu.agh.to1.dice.logic.Player</node>
-          </nodes>
-          <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="1.0" x="66.0" y="178.0" />
-          <SelectedNodes />
-          <Categories />
-          <SCOPE>All</SCOPE>
-          <VISIBILITY>private</VISIBILITY>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pl/edu/agh/to1/dice/logic/computing/SameComputingStrategy.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="24" column="20" selection-start="666" selection-end="666" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#370#379#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/edu/agh/to1/dice/logic/computing/GeneralComputingStrategy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="86" selection-start="340" selection-end="340" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/edu/agh/to1/dice/logic/DiceGame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="174" column="26" selection-start="5828" selection-end="5828" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#397#405#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1045,37 +988,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/edu/agh/to1/dice/logic/Player.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/pl/edu/agh/to1/dice/logic/computing/SequenceComputingStrategyTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="37" selection-start="545" selection-end="545" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/edu/agh/to1/dice/App.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="13" selection-start="87" selection-end="87" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/edu/agh/to1/dice/logic/ScoreBoard.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="121" column="68" selection-start="4367" selection-end="4367" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#360#396#0" expanded="true" />
-            <element signature="e#460#477#0" expanded="true" />
-            <element signature="e#542#559#0" expanded="true" />
-            <element signature="e#625#642#0" expanded="true" />
-            <element signature="e#864#887#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/pl/edu/agh/to1/dice/logic/ScoreBoardTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="53" selection-start="1070" selection-end="1070" vertical-scroll-proportion="0.0">
+        <state line="109" column="40" selection-start="3847" selection-end="3847" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1084,7 +999,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/pl/edu/agh/to1/dice/logic/computing/GeneralComputingStrategyTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="13" selection-start="431" selection-end="431" vertical-scroll-proportion="0.0">
+        <state line="17" column="13" selection-start="431" selection-end="431" vertical-scroll-proportion="0.37833828">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/pl/edu/agh/to1/dice/logic/ScoreBoardTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="40" column="53" selection-start="1070" selection-end="1070" vertical-scroll-proportion="0.8902077">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1100,9 +1024,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/pl/edu/agh/to1/dice/logic/computing/SequenceComputingStrategyTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/edu/agh/to1/dice/logic/DiceCategory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="109" column="40" selection-start="3847" selection-end="3847" vertical-scroll-proportion="0.0">
+        <state line="5" column="12" selection-start="79" selection-end="79" vertical-scroll-proportion="0.11127596">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/edu/agh/to1/dice/App.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="13" selection-start="87" selection-end="87" vertical-scroll-proportion="0.089020774">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/edu/agh/to1/dice/logic/computing/GeneralComputingStrategy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="86" selection-start="340" selection-end="340" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1111,10 +1049,91 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pl/edu/agh/to1/dice/logic/computing/SequenceComputingStrategy.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="18" selection-start="1100" selection-end="1100" vertical-scroll-proportion="0.75667655">
+        <state line="24" column="50" selection-start="834" selection-end="834" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#412#421#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/pl.edu.agh.to1.dice.logic.DiceGame">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>pl.edu.agh.to1.dice.logic.DiceGame</OriginalElement>
+          <nodes>
+            <node x="287.0" y="119.0">pl.edu.agh.to1.dice.logic.Dice</node>
+            <node x="263.0" y="1.0">pl.edu.agh.to1.dice.logic.DiceBucket</node>
+            <node x="-234.0" y="111.0">pl.edu.agh.to1.dice.logic.ScoreBoard</node>
+            <node x="46.0" y="-1.0">pl.edu.agh.to1.dice.logic.computing.RoundComputer</node>
+            <node x="31.0" y="121.0">pl.edu.agh.to1.dice.logic.computing.ComputingStrategy</node>
+            <node x="1.0" y="-116.0">pl.edu.agh.to1.dice.logic.DiceGame</node>
+            <node x="-217.0" y="-10.0">pl.edu.agh.to1.dice.logic.Player</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="pl.edu.agh.to1.dice.logic.DiceGame" target="pl.edu.agh.to1.dice.logic.computing.RoundComputer">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="pl.edu.agh.to1.dice.logic.DiceGame" target="pl.edu.agh.to1.dice.logic.Player">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="pl.edu.agh.to1.dice.logic.DiceGame" target="pl.edu.agh.to1.dice.logic.ScoreBoard">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="pl.edu.agh.to1.dice.logic.ScoreBoard" target="pl.edu.agh.to1.dice.logic.Player">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="pl.edu.agh.to1.dice.logic.DiceGame" target="pl.edu.agh.to1.dice.logic.DiceBucket">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="pl.edu.agh.to1.dice.logic.DiceBucket" target="pl.edu.agh.to1.dice.logic.Dice">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="1.0" x="-323.5" y="9.5" />
+          <SelectedNodes>
+            <node>pl.edu.agh.to1.dice.logic.computing.ComputingStrategy</node>
+          </SelectedNodes>
+          <Categories />
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/edu/agh/to1/dice/logic/ScoreBoard.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="121" column="27" selection-start="4367" selection-end="4367" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#360#396#0" expanded="true" />
+            <element signature="e#460#477#0" expanded="true" />
+            <element signature="e#542#559#0" expanded="true" />
+            <element signature="e#625#642#0" expanded="true" />
+            <element signature="e#864#887#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/edu/agh/to1/dice/logic/Player.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="37" selection-start="545" selection-end="545" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/edu/agh/to1/dice/logic/DiceGame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="174" column="26" selection-start="5828" selection-end="5828" vertical-scroll-proportion="1.4703264">
+          <folding>
+            <element signature="e#397#405#0" expanded="true" />
           </folding>
         </state>
       </provider>
