@@ -38,10 +38,10 @@ public class RoundComputer {
                 strategy = new GeneralComputingStrategy();
                 break;
             case BIG_STREET:
-                strategy = new SequenceComputingStrategy(5, 40);
+                strategy = new SequenceComputingStrategy(40, 5);
                 break;
             case LITTLE_STREET:
-                strategy = new SequenceComputingStrategy(4, 30);
+                strategy = new SequenceComputingStrategy(30, 4);
                 break;
             case FULL:
                 strategy = new FullComputingStrategy();
