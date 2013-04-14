@@ -25,4 +25,21 @@ public class Player {
     public String toString() {
         return "#" + getPlayerID();
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Player player = (Player) o;
+
+        if (playerID != player.playerID) return false;
+
+        return true;
+    }
+
+    @Override
+    public int hashCode() {
+        return playerID;
+    }
 }

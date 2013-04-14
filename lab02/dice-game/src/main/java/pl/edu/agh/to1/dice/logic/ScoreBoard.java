@@ -9,6 +9,9 @@ import java.util.Map;
  * Author: Piotr Turek
  */
 public class ScoreBoard {
+    private final static int BONUS_TRIGGER = 63;
+    private final static int BONUS = 35;
+
     private final Map<Player, Map<DiceCategory, Integer>> scores = new HashMap<Player, Map<DiceCategory, Integer>>();
     private final Map<Player, Integer> bonuses = new HashMap<Player, Integer>();
     private final Map<Player, Integer> upperSum = new HashMap<Player, Integer>();
@@ -100,10 +103,14 @@ public class ScoreBoard {
         if (diceCategory.ordinal() <= DiceCategory.SIX.ordinal()) {
             sumVal = upperSum.get(player);
             upperSum.put(player, sumVal + points);
+            if (sumVal + points >= BONUS_TRIGGER) {
+                bonuses.put(player, BONUS);
+            }
         } else {
             sumVal = bottomSum.get(player);
             bottomSum.put(player, sumVal + points);
         }
+        player.setPoints(upperSum.get(player) + bottomSum.get(player) + bonuses.get(player));
     }
 
     public boolean isIllegalMove(Player player, DiceCategory diceCategory) {
