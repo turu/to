@@ -13,7 +13,9 @@ public class DiceBucket implements Iterable<Dice> {
     public DiceBucket(int diceCount) {
         bucketSize = diceCount;
         dices = new ArrayList<Dice>(diceCount);
-
+        for (int i = 0; i < diceCount; i++) {
+            dices.add(new Dice());
+        }
     }
 
     public Boolean isBlocked(int i) {

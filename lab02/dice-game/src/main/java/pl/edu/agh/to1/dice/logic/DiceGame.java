@@ -9,15 +9,22 @@ import java.util.Scanner;
 public class DiceGame {
 
     private static final int DICE_COUNT = 5;
+    private static final int PLAYER_COUNT = 2;
 
-    private final List<Player> players = new ArrayList<Player>();
-    private final ScoreBoard scoreBoard = new ScoreBoard(players);
+    private final List<Player> players = new ArrayList<Player>(PLAYER_COUNT);
     private final DiceBucket diceBucket = new DiceBucket(DICE_COUNT);
-    private final GameController controller = new GameController(players, scoreBoard, diceBucket, new RoundComputer());
+    private final ScoreBoard scoreBoard;
+    private final GameController controller;
+
+    public DiceGame() {
+        for (int i = 0; i < PLAYER_COUNT; i++) {
+            players.add(new Player());
+        }
+        scoreBoard = new ScoreBoard(players);
+        controller = new GameController(players, scoreBoard, diceBucket, new RoundComputer());
+    }
 
     public void play() {
-        Scanner scanner = new Scanner(System.in);
-
         System.out.println("The Dice Game is about to start!!! Are you excited? I'm not.\n");
 
         while (!controller.isFinished()) {

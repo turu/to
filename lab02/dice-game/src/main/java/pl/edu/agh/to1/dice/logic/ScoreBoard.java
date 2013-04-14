@@ -34,26 +34,40 @@ public class ScoreBoard {
         for (Player p : players) {
             System.out.printf(" | %-2s", p);
         }
+        System.out.printf("%n");
+        linebreak();
 
         displaySubtable(0, DiceCategory.SIX.ordinal());
-        System.out.printf("%n%15s", "premia");
+        linebreak();
+        System.out.printf("%15s", "premia");
         displaySummary(bonuses);
-        System.out.printf("%n%15s", "suma");
+        System.out.printf("%15s", "suma");
         displaySummary(upperSum);
+        linebreak();
         displaySubtable(DiceCategory.SIX.ordinal()+1, DiceCategory.values().length-1);
-        System.out.printf("%n%15s", "suma");
+        linebreak();
+        System.out.printf("%15s", "suma");
         displaySummary(bottomSum);
-        System.out.printf("%n%15s", "razem");
+        System.out.printf("%15s", "razem");
         for (Player p : players) {
             System.out.printf(" | %-2s", upperSum.get(p) + bottomSum.get(p));
         }
-        System.out.printf("%n");
+        System.out.printf("%n%n");
+    }
+
+    private void linebreak() {
+        System.out.printf("%15s", "------------");
+        for (Player p : players) {
+            System.out.printf("%5s", "-----");
+        }
+        System.out.printf("%5s%n", "-----");
     }
 
     private void displaySummary(Map<Player, Integer> pointsMap) {
         for (Player p : players) {
             System.out.printf(" | %-2s", pointsMap.get(p));
         }
+        System.out.printf("%n");
     }
 
     private void displaySubtable(int l, int r) {

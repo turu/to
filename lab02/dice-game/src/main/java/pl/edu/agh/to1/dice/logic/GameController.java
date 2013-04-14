@@ -14,8 +14,8 @@ public class GameController {
     private final List<Player> players;
     private final ScoreBoard scoreBoard;
     private final DiceBucket diceBucket;
-    private int roundsPlayed = 0;
     private final RoundComputer roundComputer;
+    private int roundsPlayed = 0;
 
     public GameController(List<Player> players, ScoreBoard scoreBoard, DiceBucket diceBucket, RoundComputer roundComputer) {
         this.players = players;
@@ -37,7 +37,7 @@ public class GameController {
     }
 
     public boolean isFinished() {
-        return roundsPlayed < DiceCategory.values().length;
+        return roundsPlayed >= DiceCategory.values().length;
     }
 
     public void nextRound() {
@@ -45,12 +45,19 @@ public class GameController {
             throw new DiceGameException("The game has already ended. No more moves to make!");
         }
 
+        System.out.println("=================================================================================");
+        System.out.printf("                                                                  >>> Round %d <<<%n%n",
+                roundsPlayed + 1);
+
         for (Player p : players) {
+            System.out.printf(">>> Player %s moves. <<<\n\n", p);
             scoreBoard.display();
             final int result = makeAMove(p);
-            System.out.println("Player's " + p + " result in this round is " + result);
+            System.out.println("Player's " + p + " result in this round is " + result + "\n");
             scoreBoard.display();
+            System.out.printf("%n%n");
         }
+        System.out.println("=================================================================================\n\n");
 
         roundsPlayed++;
     }
@@ -114,9 +121,11 @@ public class GameController {
         int rollsLeft = MAX_ROLLS_ALLOWED;
         while (rollsLeft > 0) {
             diceBucket.roll();
-            System.out.println("Current arrangement of dice:\n");
+            System.out.print("Current arrangement of dice: ");
             diceBucket.display();
-            System.out.println("Accept arrangement? [y/n] ");
+            System.out.printf("%n");
+            if (rollsLeft == 1) break;
+            System.out.println("Accept this arrangement? [y/n] ");
 
             if (!scanner.nextBoolean()) {
                 System.out.println("Enter which dices to block (numbers separated by spaces), f.e.: 1 2 3 4\n");
